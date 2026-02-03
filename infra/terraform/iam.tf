@@ -57,6 +57,11 @@ resource "aws_iam_policy" "monitor_instance_managed_policy" {
   policy = data.aws_iam_policy_document.monitor_instance_policy.json
 }
 
+resource "aws_iam_role_policy_attachment" "monitor_instance_policy_attachment" {
+  role       = aws_iam_role.monitor_instance_role.name
+  policy_arn = aws_iam_policy.monitor_instance_managed_policy.arn
+}
+
 resource "aws_iam_instance_profile" "monitor_instance_profile" {
   name = "${var.project_name}-instance-profile-${var.environment}"
   role = aws_iam_role.monitor_instance_role.name
