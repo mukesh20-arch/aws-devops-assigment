@@ -198,7 +198,32 @@ can be extended without completely rewriting it.
 After this, the system will run checks on the configured schedule and send
 email alerts on meaningful state changes.
 
-## 8. Diagrams (how to visualise)
+## 8. Validation steps (quick)
+
+1. **Insert a sample API config**
+   - Add a test API in DynamoDB (e.g. `https://httpbin.org/status/200`).
+2. **Run once manually**
+   - On EC2: `python3 -m app.src.cron_entrypoint`
+   - Expect the state to be stored in `api_health_states`.
+3. **Trigger an alert**
+   - Change the test URL to return `500`.
+   - Run again and confirm you receive an email.
+4. **Cron check**
+   - `crontab -l` shows the 2‑minute schedule.
+   - Log file: `/home/ubuntu/api-monitor.log`.
+
+## 9. Troubleshooting (common)
+
+- **No email received**
+  - Confirm the SNS subscription email.
+  - Check spam/junk folders.
+- **DynamoDB AccessDenied**
+  - Ensure the EC2 IAM role has DynamoDB permissions attached.
+- **No log file**
+  - Run the command once manually to create it.
+  - Verify the cron line is on its own line in `crontab -e`.
+
+## 10. Diagrams (how to visualise)
 
 For documentation and interviews, the system can be drawn as:
 

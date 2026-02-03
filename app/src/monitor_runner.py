@@ -66,6 +66,7 @@ def run_monitor_once() -> None:
     instance. It keeps the logic small and straightforward on purpose.
     """
     configs = fetch_all_api_configs()
+    print(f"[monitor] {len(configs)} APIs to check at {_now_iso()}")
 
     for config in configs:
         state, status_code, latency_ms, error = check_api(config)
