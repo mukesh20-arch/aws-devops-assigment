@@ -4,7 +4,7 @@
 // added here or in a separate file if needed.
 
 resource "aws_sns_topic" "api_health_alerts" {
-  name = "${var.project_name}-alerts-${var.environment}"
+  name = "${var.project_name}-alerts-${var.environment}-v2"
 }
 
 // Email subscription for alerts. For the assignment a single email is
@@ -13,5 +13,5 @@ resource "aws_sns_topic" "api_health_alerts" {
 resource "aws_sns_topic_subscription" "alert_email" {
   topic_arn = aws_sns_topic.api_health_alerts.arn
   protocol  = "email"
-  endpoint  = "bollinenimukesh20@gmail.com"
+  endpoint  = "bollinenimukesh20+alert@gmail.com"
 }
