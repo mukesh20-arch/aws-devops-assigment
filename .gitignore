@@ -13,5 +13,13 @@
 # SSH keys
 *.pem
 
+# Local Terraform artifacts
+infra/terraform/.terraform/
+infra/terraform/terraform.tfstate*
+infra/terraform/*.json
+
+# Local cloned repo (accidental nested repo)
+api-health-monitoring-system/
+
  # Environment / local config
  .env
