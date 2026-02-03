@@ -43,7 +43,7 @@ resource "aws_security_group" "monitor_sg" {
 resource "aws_instance" "monitor" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
-  key_name      = "monitor-key"
+  key_name      = "monitor-key-2"
 
   iam_instance_profile = aws_iam_instance_profile.monitor_instance_profile.name
   vpc_security_group_ids = [
