@@ -13,5 +13,5 @@ resource "aws_sns_topic" "api_health_alerts" {
 resource "aws_sns_topic_subscription" "alert_email" {
   topic_arn = aws_sns_topic.api_health_alerts.arn
   protocol  = "email"
-  endpoint  = "bollinenimukesh20+alert@gmail.com"
+  endpoint  = "bollinenimukesh20@outlook.com"
 }
