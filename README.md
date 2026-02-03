@@ -236,3 +236,15 @@ For documentation and interviews, the system can be drawn as:
 
 Even a simple hand‑drawn version that shows these components and arrows is
 enough to explain the design clearly.
+
+## 11. Documentation and assets
+
+- Design document (PDF): `docs/Self-Hosted API Health Monitoring System – Design Documentation.pdf`
+  - Direct link: `docs/Self-Hosted%20API%20Health%20Monitoring%20System%20%E2%80%93%20Design%20Documentation.pdf`
+- Diagrams:
+  - `Architecture and Workflow.png`
+  - `API Health Check Work-flow.png`
+- Alert examples:
+  - `api up email.png`
+  - `api down email.png`
+  - `api sns alret  email .png`
