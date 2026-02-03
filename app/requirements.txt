@@ -1,0 +1,6 @@
+# Python dependencies for the API Health Monitoring System.
+#
+# The list is intentionally small and focused on what we actually use.
+
+requests==2.32.3
+boto3==1.35.0

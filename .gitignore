@@ -1,0 +1,14 @@
+ # Python
+ __pycache__/
+ *.pyc
+ 
+ # Virtual environments
+ .venv/
+ venv/
+ 
+ # Terraform
+ .terraform/
+ terraform.tfstate*
+ 
+ # Environment / local config
+ .env
