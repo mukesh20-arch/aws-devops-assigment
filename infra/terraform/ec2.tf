@@ -22,7 +22,7 @@ resource "aws_security_group" "monitor_sg" {
   name        = "${var.project_name}-sg-${var.environment}"
   description = "Security group for API health monitoring instance"
 
-  // Allow SSH from anywhere for simplicity in the assignment.
+  // Allow SSH from anywhere for simplicity in this project.
   // In a real setup, this should be restricted to your IP.
   ingress {
     from_port   = 22

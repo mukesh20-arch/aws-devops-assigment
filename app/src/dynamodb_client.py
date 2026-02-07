@@ -37,7 +37,7 @@ def fetch_all_api_configs() -> List[ApiConfig]:
     """
     Read all API configurations from DynamoDB.
 
-    For an intern-level project we can keep it simple and just scan the
+    For this project we can keep it simple and just scan the
     table. If the number of APIs grows very large, we could later
     introduce pagination or filtering.
     """

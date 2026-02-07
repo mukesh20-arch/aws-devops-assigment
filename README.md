@@ -1,6 +1,6 @@
 # API Health Monitoring System
 
-Self‑hosted API health monitoring service designed as a DevOps internship assignment.  
+Self‑hosted API health monitoring service designed as a DevOps project.  
 The goal is to show clear thinking about reliability, AWS, and Terraform rather than to build a full product.
 
 ## 1. Problem the system solves

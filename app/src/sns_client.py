@@ -20,7 +20,7 @@ def send_alert(subject: str, message: str) -> None:
     Publish a basic alert message to the SNS topic.
 
     The subscriber (email) will receive the subject and message as a
-    normal email. For this assignment we do not need any complex
+    normal email. For this project we do not need any complex
     formatting.
     """
     cfg = get_config()

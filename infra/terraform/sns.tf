@@ -7,7 +7,7 @@ resource "aws_sns_topic" "api_health_alerts" {
   name = "${var.project_name}-alerts-${var.environment}-v2"
 }
 
-// Email subscription for alerts. For the assignment a single email is
+// Email subscription for alerts. For this project a single email is
 // enough, and it keeps the configuration easy to explain.
 
 resource "aws_sns_topic_subscription" "alert_email" {

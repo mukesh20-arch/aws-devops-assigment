@@ -18,6 +18,6 @@ provider "aws" {
   region = var.aws_region
 
   # In a real setup you would configure credentials via environment
-  # variables or a shared credentials file. For this assignment it is
+  # variables or a shared credentials file. For this project it is
   # enough to document that assumption.
 }
